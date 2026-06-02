@@ -4,18 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accesorios Eliza — Optimización de Producción</title>
-
-  <!-- Fuentes de Google -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-
-  <!-- Estilos -->
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     BARRA DE NAVEGACIÓN
-══════════════════════════════════════ -->
 <nav>
   <div class="nav-brand">
     <div class="nav-logo">✦</div>
@@ -27,19 +20,14 @@
   <div style="font-size:13px;color:var(--text3);font-weight:300;">Método Simplex · Programación Lineal</div>
 </nav>
 
-<!-- ══════════════════════════════════════
-     CONTENIDO PRINCIPAL
-══════════════════════════════════════ -->
 <div class="page">
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-eyebrow">Investigación Operativa 2026</div>
     <h1>Producción óptima &amp;<br>utilidad máxima</h1>
     <p>Ingresa los materiales disponibles y los precios de cada producto para calcular automáticamente la combinación que maximiza tus ganancias.</p>
   </div>
 
-  <!-- PESTAÑAS -->
   <div class="tabs-wrapper">
     <div class="tabs">
       <button class="tab-btn active" onclick="showTab('datos')">Ingresar datos</button>
@@ -48,116 +36,57 @@
     </div>
   </div>
 
-  <!-- ══════════ TAB 1: DATOS ══════════ -->
+  <!-- TAB 1: DATOS -->
   <div class="section active" id="tab-datos">
-
     <div class="product-grid">
 
-      <!-- COLLAR -->
       <div class="product-card collar">
         <div class="product-header">
           <div class="product-icon collar">💜</div>
-          <div>
-            <div class="product-name">Collar</div>
-            <div class="product-type">Bisutería</div>
-          </div>
+          <div><div class="product-name">Collar</div><div class="product-type">Bisutería</div></div>
         </div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span>
-          <input type="number" id="t1" value="20" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span>
-          <input type="number" id="h1" value="50" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span>
-          <input type="number" id="p1" value="70" min="0">
-        </div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span><input type="number" id="t1" value="20" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span><input type="number" id="h1" value="50" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span><input type="number" id="p1" value="70" min="0"></div>
         <div class="field-divider"></div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
-        <div class="field-row">
-          <span class="field-label">💰 Precio venta (Bs)</span>
-          <input type="number" id="v1" value="25" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label">🧾 Costo unitario (Bs)</span>
-          <input type="number" id="c1" value="15" min="0">
-        </div>
+        <div class="field-row"><span class="field-label">💰 Precio venta (Bs)</span><input type="number" id="v1" value="25" min="0"></div>
+        <div class="field-row"><span class="field-label">🧾 Costo unitario (Bs)</span><input type="number" id="c1" value="15" min="0"></div>
       </div>
 
-      <!-- MANILLA -->
       <div class="product-card manilla">
         <div class="product-header">
           <div class="product-icon manilla">💚</div>
-          <div>
-            <div class="product-name">Manilla</div>
-            <div class="product-type">Bisutería</div>
-          </div>
+          <div><div class="product-name">Manilla</div><div class="product-type">Bisutería</div></div>
         </div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span>
-          <input type="number" id="t2" value="15" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span>
-          <input type="number" id="h2" value="21" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span>
-          <input type="number" id="p2" value="35" min="0">
-        </div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span><input type="number" id="t2" value="15" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span><input type="number" id="h2" value="21" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span><input type="number" id="p2" value="35" min="0"></div>
         <div class="field-divider"></div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
-        <div class="field-row">
-          <span class="field-label">💰 Precio venta (Bs)</span>
-          <input type="number" id="v2" value="15" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label">🧾 Costo unitario (Bs)</span>
-          <input type="number" id="c2" value="6" min="0">
-        </div>
+        <div class="field-row"><span class="field-label">💰 Precio venta (Bs)</span><input type="number" id="v2" value="15" min="0"></div>
+        <div class="field-row"><span class="field-label">🧾 Costo unitario (Bs)</span><input type="number" id="c2" value="6" min="0"></div>
       </div>
 
-      <!-- ANILLO -->
       <div class="product-card anillo">
         <div class="product-header">
           <div class="product-icon anillo">🧡</div>
-          <div>
-            <div class="product-name">Anillo</div>
-            <div class="product-type">Bisutería</div>
-          </div>
+          <div><div class="product-name">Anillo</div><div class="product-type">Bisutería</div></div>
         </div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span>
-          <input type="number" id="t3" value="15" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span>
-          <input type="number" id="h3" value="35" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span>
-          <input type="number" id="p3" value="25" min="0">
-        </div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span><input type="number" id="t3" value="15" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span><input type="number" id="h3" value="35" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span><input type="number" id="p3" value="25" min="0"></div>
         <div class="field-divider"></div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
-        <div class="field-row">
-          <span class="field-label">💰 Precio venta (Bs)</span>
-          <input type="number" id="v3" value="7" min="0">
-        </div>
-        <div class="field-row">
-          <span class="field-label">🧾 Costo unitario (Bs)</span>
-          <input type="number" id="c3" value="3" min="0">
-        </div>
+        <div class="field-row"><span class="field-label">💰 Precio venta (Bs)</span><input type="number" id="v3" value="7" min="0"></div>
+        <div class="field-row"><span class="field-label">🧾 Costo unitario (Bs)</span><input type="number" id="c3" value="3" min="0"></div>
       </div>
 
-    </div><!-- /product-grid -->
+    </div>
 
-    <!-- RECURSOS DISPONIBLES -->
     <div class="resources-row">
       <div class="resource-item">
         <div class="resource-label">⏱ Tiempo disponible al mes</div>
@@ -177,13 +106,11 @@
     </div>
 
     <button class="btn-calc" onclick="optimizar()">
-      <span>Calcular producción óptima</span>
-      <span>→</span>
+      <span>Calcular producción óptima</span><span>→</span>
     </button>
+  </div>
 
-  </div><!-- /tab-datos -->
-
-  <!-- ══════════ TAB 2: RESULTADO ══════════ -->
+  <!-- TAB 2: RESULTADO -->
   <div class="section" id="tab-resultado">
     <div id="result-content">
       <div class="empty-state">
@@ -193,7 +120,7 @@
     </div>
   </div>
 
-  <!-- ══════════ TAB 3: SENSIBILIDAD ══════════ -->
+  <!-- TAB 3: SENSIBILIDAD -->
   <div class="section" id="tab-sensibilidad">
     <div id="sens-content">
       <div class="empty-state">
@@ -203,15 +130,11 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <div class="footer-note">
     Accesorios Eliza · La Paz, Bolivia 2026 · Método Simplex (George Dantzig, 1947)
   </div>
+</div>
 
-</div><!-- /page -->
-
-<!-- JavaScript (al final del body para mejor rendimiento) -->
 <script src="app.js"></script>
-
 </body>
 </html>
