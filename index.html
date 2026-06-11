@@ -6,8 +6,12 @@
   <title>Accesorios Eliza — Optimización de Producción</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
 </head>
 <body>
+
+ <div class="lava-blob"></div>
+  <div class="lava-blob"></div>
 
 <nav>
   <div class="nav-brand">
@@ -42,64 +46,104 @@
 
       <div class="product-card collar">
         <div class="product-header">
-          <div class="product-icon collar">💜</div>
+          <div class="product-icon collar">
+            <img src="img/collar.png" alt="MDN" />
+          </div>
           <div><div class="product-name">Collar</div><div class="product-type">Bisutería</div></div>
         </div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span><input type="number" id="t1" value="20" min="0"></div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span><input type="number" id="h1" value="50" min="0"></div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span><input type="number" id="p1" value="70" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon tiempo"></span>Tiempo (min)</span><input type="number" id="t1" value="20" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon hilo"></span>Hilo (cm)</span><input type="number" id="h1" value="50" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon perlas"></span>Perlas (uni)</span><input type="number" id="p1" value="70" min="0"></div>
         <div class="field-divider"></div>
         <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
-        <div class="field-row"><span class="field-label">💰 Precio venta (Bs)</span><input type="number" id="v1" value="25" min="0"></div>
-        <div class="field-row"><span class="field-label">🧾 Costo unitario (Bs)</span><input type="number" id="c1" value="15" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon dinero"></span>Precio venta (Bs)</span><input type="number" id="v1" value="25" min="0"></div>
+        <div class="field-row"><span class="field-label"><span class="field-icon costo"></span>Costo unitario (Bs)</span><input type="number" id="c1" value="15" min="0"></div>
       </div>
 
       <div class="product-card manilla">
-        <div class="product-header">
-          <div class="product-icon manilla">💚</div>
-          <div><div class="product-name">Manilla</div><div class="product-type">Bisutería</div></div>
-        </div>
-        <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span><input type="number" id="t2" value="15" min="0"></div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span><input type="number" id="h2" value="21" min="0"></div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span><input type="number" id="p2" value="35" min="0"></div>
-        <div class="field-divider"></div>
-        <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
-        <div class="field-row"><span class="field-label">💰 Precio venta (Bs)</span><input type="number" id="v2" value="15" min="0"></div>
-        <div class="field-row"><span class="field-label">🧾 Costo unitario (Bs)</span><input type="number" id="c2" value="6" min="0"></div>
-      </div>
+  <div class="product-header">
+    <div class="product-icon manilla"><img src="img/brazalete.png" alt="Manilla" /></div>
+    <div><div class="product-name">Manilla</div><div class="product-type">Bisutería</div></div>
+  </div>
+
+  <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
+
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon tiempo"></span> Tiempo (min)</span>
+    <input type="number" id="t2" value="15" min="0">
+  </div>
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon hilo"></span> Hilo (cm)</span>
+    <input type="number" id="h2" value="21" min="0">
+  </div>
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon perlas"></span> Perlas (uni)</span>
+    <input type="number" id="p2" value="35" min="0">
+  </div>
+
+  <div class="field-divider"></div>
+  <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
+
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon dinero"></span> Precio venta (Bs)</span>
+    <input type="number" id="v2" value="15" min="0">
+  </div>
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon costo"></span> Costo unitario (Bs)</span>
+    <input type="number" id="c2" value="6" min="0">
+  </div>
+</div>
 
       <div class="product-card anillo">
-        <div class="product-header">
-          <div class="product-icon anillo">🧡</div>
-          <div><div class="product-name">Anillo</div><div class="product-type">Bisutería</div></div>
-        </div>
-        <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">⏱</span>Tiempo (min)</span><input type="number" id="t3" value="15" min="0"></div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">🪡</span>Hilo (cm)</span><input type="number" id="h3" value="35" min="0"></div>
-        <div class="field-row"><span class="field-label"><span class="field-icon">🟣</span>Perlas (uni)</span><input type="number" id="p3" value="25" min="0"></div>
-        <div class="field-divider"></div>
-        <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
-        <div class="field-row"><span class="field-label">💰 Precio venta (Bs)</span><input type="number" id="v3" value="7" min="0"></div>
-        <div class="field-row"><span class="field-label">🧾 Costo unitario (Bs)</span><input type="number" id="c3" value="3" min="0"></div>
-      </div>
+  <div class="product-header">
+    <div class="product-icon anillo"><img src="img/anillo.png" alt="Anillo" /></div>
+    <div><div class="product-name">Anillo</div><div class="product-type">Bisutería</div></div>
+  </div>
+
+  <div class="card-title" style="font-size:11px;margin-bottom:8px;">Materiales por unidad</div>
+
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon tiempo"></span> Tiempo (min)</span>
+    <input type="number" id="t3" value="15" min="0">
+  </div>
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon hilo"></span> Hilo (cm)</span>
+    <input type="number" id="h3" value="35" min="0">
+  </div>
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon perlas"></span> Perlas (uni)</span>
+    <input type="number" id="p3" value="25" min="0">
+  </div>
+
+  <div class="field-divider"></div>
+  <div class="card-title" style="font-size:11px;margin-bottom:8px;">Precios</div>
+
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon dinero"></span> Precio venta (Bs)</span>
+    <input type="number" id="v3" value="7" min="0">
+  </div>
+  <div class="field-row">
+    <span class="field-label"><span class="field-icon costo"></span> Costo unitario (Bs)</span>
+    <input type="number" id="c3" value="3" min="0">
+  </div>
+</div>
 
     </div>
 
     <div class="resources-row">
       <div class="resource-item">
-        <div class="resource-label">⏱ Tiempo disponible al mes</div>
+        <div class="resource-label"><span class="field-icon calendario"></span> Tiempo disponible al mes</div>
         <input type="number" id="rT" value="3600" min="0">
         <div class="resource-unit">minutos totales</div>
       </div>
       <div class="resource-item">
-        <div class="resource-label">🪡 Hilo elástico disponible</div>
+        <div class="resource-label"><span class="field-icon hilos"></span>  Hilo elástico disponible</div>
         <input type="number" id="rH" value="1000" min="0">
         <div class="resource-unit">centímetros totales</div>
       </div>
       <div class="resource-item">
-        <div class="resource-label">🟣 Perlas disponibles</div>
+        <div class="resource-label"><span class="field-icon perla"></span>  Perlas disponibles</div>
         <input type="number" id="rP" value="700" min="0">
         <div class="resource-unit">unidades totales</div>
       </div>
@@ -111,24 +155,36 @@
   </div>
 
   <!-- TAB 2: RESULTADO -->
-  <div class="section" id="tab-resultado">
-    <div id="result-content">
-      <div class="empty-state">
-        <div class="empty-icon">📊</div>
-        <p>Ingresa los datos y presiona <strong>Calcular</strong> para ver la solución óptima.</p>
+<div class="section" id="tab-resultado">
+  <div id="result-content">
+    <div class="empty-state">
+      <div class="wave-wrapper">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
       </div>
+      <p>Ingresa los datos y presiona <strong>Calcular</strong> para ver la solución óptima.</p>
     </div>
   </div>
+</div>
 
   <!-- TAB 3: SENSIBILIDAD -->
-  <div class="section" id="tab-sensibilidad">
-    <div id="sens-content">
-      <div class="empty-state">
-        <div class="empty-icon">🔬</div>
-        <p>Primero calcula la producción óptima para ver el análisis de sensibilidad.</p>
+<div class="section" id="tab-sensibilidad">
+  <div id="sens-content">
+    <div class="empty-state">
+      <div class="wave-wrapper">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
       </div>
+      <p>Primero calcula la producción óptima para ver el análisis de sensibilidad.</p>
     </div>
   </div>
+</div>
 
   <div class="footer-note">
     Accesorios Eliza · La Paz, Bolivia 2026 · Método Simplex (George Dantzig, 1947)
